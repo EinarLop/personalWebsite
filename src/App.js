@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   height: auto;
   display: flex;
   flex-wrap: wrap;
+  background-color: #fefefa;
 `;
 
 function App() {
