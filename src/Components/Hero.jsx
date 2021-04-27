@@ -11,11 +11,14 @@ const Wrapper = styled.div`
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  background-color: #80cbc4;
+
+  background-color:
+#90caf9;
   padding: 25px;
   font-family:  'Poppins', sans-serif;
-  color:#004d40;
-  align-items: space-evenly;
+ 
+  color:#0d47a1;
+  //align-items: space-evenly;
 `;
 const Title = styled.p`
 display:block;
