@@ -1,6 +1,7 @@
 import react from "react";
 import styled from "styled-components";
 function ProjectCardNew() {
+
   const Wrapper = styled.div`
     width: 100%;
     font-family: "Poppins", sans-serif;
@@ -9,44 +10,58 @@ function ProjectCardNew() {
     padding: 15px;
     display: flex;
     flex-wrap: wrap;
+    max-width: 1024px;
   `;
 
   const Title = styled.p`
     font-size: 2rem;
-    &:hover {
-      color: #0d47a1;
-      text-decoration: underline;
-    }
     margin-bottom: 15px;
   `;
+
   const Description = styled.p`
     font-size: 1.6rem;
     margin-bottom: 15px;
   `;
-  const MoreInfo = styled.p`
+
+
+  const InfoLinkButton = styled.button`
     font-size: 1.6rem;
     margin-bottom: 15px;
-    color: purple;
+    width: 100%;
+    height: 40px;
+    border-radius:5px;
+    background-color: #fefefa;
+   border: 2px solid #9ccc65;
+   color: #33691e;
+   justify-self: center;
+   &:hover{
+     background-color: #9ccc65;
+   }
 
-    width: 50%;
+
   `;
 
-  const Link = styled.div`
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-    background-color: purple;
+  const InfoLinkContainer = styled.p`
     width: 50%;
-    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 767px){
+      width: 100%;
+    }
   `;
+
+
 
   const TagsContainer = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     width: 100%;
+    margin-bottom:15px;
   `;
   const Tag = styled.p`
-    color: #61dbfb;
+    /* color: #61dbfb; */
     font-size: 1.8rem;
     &::before {
       content: "▹";
@@ -64,8 +79,13 @@ function ProjectCardNew() {
       <TagsContainer>
         <Tag> React </Tag>
       </TagsContainer>
-      <MoreInfo> More information</MoreInfo>
-      <Link> Live version </Link>
+      <InfoLinkContainer>
+        <InfoLinkButton> More information</InfoLinkButton>
+      </InfoLinkContainer>
+      <InfoLinkContainer>
+        <InfoLinkButton> Live version </InfoLinkButton>
+      </InfoLinkContainer>
+
     </Wrapper>
   );
 }
