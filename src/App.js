@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { ReactIcon, SassIcon, NodeIcon, MongodbIcon } from "./Components/Icons";
 import ProjectCard from "./Components/ProjectCard";
 import CertificationCard from "./Components/CertificationCard";
 import Hero from "./Components/Hero";
 import ProjectCardNew from "./Components/ProjectCardNew.jsx";
 import styled from "styled-components";
+
 const Wrapper = styled.div`
   width: 100%;
   height: auto;
@@ -38,6 +40,7 @@ const Title = styled.p`
   text-align: center;
   font-weight: 500;
 `;
+
 function App() {
   const [shown, setShown] = useState(true);
   const [buttonText, setButtonText] = useState("Show certifications");
@@ -55,6 +58,7 @@ function App() {
       setTitleText("Here are some of my favortite projects");
     }
   }
+
   return (
     <div>
       <Hero />
@@ -62,11 +66,22 @@ function App() {
       <Title>{titleText}</Title>
       {shown ? (
         <Wrapper>
-          <ProjectCardNew />
+          <ProjectCardNew
+            title="100% Original Inventory System"
+            description="orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut al"
+            childComponents={[
+              <ReactIcon />,
+              <SassIcon />,
+              <NodeIcon />,
+              <MongodbIcon />,
+            ]}
+          />
         </Wrapper>
       ) : (
         <Wrapper>
-          <CertificationCard />
+          <CertificationCard url="https://drive.google.com/file/d/1hPE0dHM6DKbHH1Be46qNJmTRp9Vwahl7/preview" />
+
+          <CertificationCard url="https://drive.google.com/file/d/1p4znXL3uFGZg1uElZiBaOHWV-aUGfQyQ/preview" />
         </Wrapper>
       )}
     </div>

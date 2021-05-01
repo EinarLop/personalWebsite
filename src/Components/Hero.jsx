@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { FaGithub } from 'react-icons/fa';
 import { AiFillLinkedin } from 'react-icons/ai'
 import { ImProfile } from "react-icons/im"
+import { GrInherit } from 'react-icons/gr';
+import ResumePdf from "./Resume/Resume.pdf"
 
 
 
@@ -22,10 +24,11 @@ const Wrapper = styled.div`
 `;
 const Title = styled.p`
 display:block;
-font-size: 3rem;
+font-size: 3.5rem;
 width: 100%;
 font-weight: 500;
 height: auto;
+
 `
 
 const Subtitle = styled.p`
@@ -36,51 +39,65 @@ font-weight: 500;
 height: auto;
 `
 const Description = styled.p`
-font-size: 1.6rem;
+font-size: 2rem;
 width: 100%;
 
 ::before{
-  content: "● " ;
+  content: "➜ " ;
 }
 
 `
 const LinkBox = styled.div`
-margin-top:15px;
+margin-top:25px;
 width: 175px;
 display: flex;
 justify-content: space-between;
 
 `
 
-
-
+const Link = styled.a`
+color: inherit; 
+`
 const Github = styled(FaGithub)`
   width:4rem;
   height: 4rem;
+  &:hover{
+    color:white;
+  }
 `
 
 const LinkedIn = styled(AiFillLinkedin)`
   width:4rem;
   height: 4rem;
+  &:hover{
+    color:white;
+  }
 `
 
 const Resume = styled(ImProfile)`
   width:4rem;
   height: 4rem;
+  &:hover{
+    color:white;
+  }
 `
 function Hero() {
   return (
     <Wrapper>
-      <Title>Hey, my name is Einar</Title>
-      <Subtitle>And I am:</Subtitle>
+      <Title>Hello, I am Einar</Title>
+
 
       <Description> A Computer science student at ITESM looking foward to graduating in winter 2021</Description>
       <Description>Web developer </Description>
       <LinkBox>
+        <Link href="https://github.com/einarlop" target="_blank" >
+          <Github />
+        </Link>
 
-        <Github />
-        <LinkedIn />
-        <Resume />
+        <Link href="https://www.linkedin.com/in/einarlopez/" target="_blank">   <LinkedIn /> </Link>
+
+        <Link href={ResumePdf} target="_blank"> <Resume /> </Link>
+
 
 
       </LinkBox>
@@ -89,4 +106,4 @@ function Hero() {
   )
 }
 
-export default Hero 
+export default Hero
