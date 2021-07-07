@@ -21,7 +21,19 @@ const AboutMe = () => {
   `
 
   const Img = styled.img`
-    width: 0
+    width: 0;
+
+
+    @media (min-width: 768px){
+     width : 35%;
+     max-height: 400px;
+     margin: auto 0;
+    }
+
+    @media (min-width: 1024px){
+     width : 40%;
+     max-height: 410px;
+    }
   `
 
   const About = styled.main`
@@ -29,13 +41,24 @@ const AboutMe = () => {
     font-family: "Poppins", sans-serif;
     display: flex;
     flex-direction: column;
-    
+    @media (min-width: 768px){
+     width : 65% ;
+     padding-left: 25px;
+
+     @media (min-width: 1024px){
+     width : 60%;
+    }
+
+    }
   `
   const Title = styled.p`
     font-size: 3.5rem;
     /* color: #2C5784; */
     color: #FC5185;
     height: auto;
+    @media (min-width: 768px){
+     width : 70%;
+    }
     /* line-height: 1.6; */
   `
 
@@ -92,7 +115,7 @@ const AboutMe = () => {
   &:hover{
     color:#FC5185;
   }
-`
+  `
 
   return (
     <Wrapper>

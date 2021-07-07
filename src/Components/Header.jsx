@@ -18,6 +18,9 @@ const Header = () => {
     padding: 25px 25px 0 25px;
     background-color: #F5F5F5;
     flex-wrap: wrap;
+    max-width: 1440px;
+    margin: auto;
+    margin: 0 auto;
     @media (min-width: 768px){
       justify-content: flex-start;
       gap: 25px; 
