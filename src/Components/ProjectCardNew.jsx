@@ -28,7 +28,9 @@ const Description = styled.p`
     margin-bottom: 15px;
   `;
 
-
+<div>
+  <p></p>
+</div>
 
 
 const InfoLinkButton = styled.button`

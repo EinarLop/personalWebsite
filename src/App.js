@@ -5,6 +5,8 @@ import CertificationCard from "./Components/CertificationCard";
 import Hero from "./Components/Hero";
 import ProjectCardNew from "./Components/ProjectCardNew.jsx";
 import styled from "styled-components";
+import Header from "./Components/Header";
+import AboutMe from "./Components/AboutMe";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -60,7 +62,9 @@ function App() {
   }
 
   return (
-    <div>
+    <div style={{ backgroundColor: "#F5F5F5" }}>
+      <Header />
+      <AboutMe />
       <Hero />
       <Button onClick={changeContent}>{buttonText}</Button>
       <Title>{titleText}</Title>

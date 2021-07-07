@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { DiReact, DiSass, DiMongodb } from "react-icons/di";
 import { GrNode } from "react-icons/gr";
 import { SiJsonwebtokens } from "react-icons/si"
+import { CgBee } from "react-icons/cg"
+
 
 
 
@@ -53,5 +55,8 @@ const DiMongodbIcon = styled(DiMongodb)`
 const MongodbIcon = () => {
   return (<Tag> <DiMongodbIcon /> MongoDB </Tag>)
 }
+
+
+
 
 export { ReactIcon, SassIcon, NodeIcon, MongodbIcon }
