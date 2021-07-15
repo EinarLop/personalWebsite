@@ -7,18 +7,21 @@ import ProjectCardNew from "./Components/ProjectCardNew.jsx";
 import styled from "styled-components";
 import Header from "./Components/Header";
 import AboutMe from "./Components/AboutMe";
+import TechStack from "./Components/TechStack";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const Wrapper = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #fefefa;
-  justify-content: space-evenly;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 25px;
-`;
+// const Wrapper = styled.div`
+//   width: 100%;
+//   height: auto;
+//   display: flex;
+//   flex-wrap: wrap;
+//   background-color: #fefefa;
+//   justify-content: space-evenly;
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 25px;
+
+// `;
 
 const Button = styled.a`
   margin: 50px auto;
@@ -43,6 +46,9 @@ const Title = styled.p`
   font-weight: 500;
 `;
 
+const Wrapper = styled.div`
+  background-color: #f5f5f5;
+`;
 function App() {
   const [shown, setShown] = useState(true);
   const [buttonText, setButtonText] = useState("Show certifications");
@@ -62,10 +68,21 @@ function App() {
   }
 
   return (
-    <div style={{ backgroundColor: "#F5F5F5" }}>
-      <Header />
-      <AboutMe />
-      <Hero />
+    <Router>
+      <Wrapper>
+        <Header />
+        <Route exact path="/" component={AboutMe} />
+        <Route exact path="/projects" component={AboutMe} />
+        <Route exact path="/certifications" component={AboutMe} />
+      </Wrapper>
+    </Router>
+  );
+}
+
+export default App;
+
+{
+  /* <Hero />
       <Button onClick={changeContent}>{buttonText}</Button>
       <Title>{titleText}</Title>
       {shown ? (
@@ -87,9 +104,5 @@ function App() {
 
           <CertificationCard url="https://drive.google.com/file/d/1p4znXL3uFGZg1uElZiBaOHWV-aUGfQyQ/preview" />
         </Wrapper>
-      )}
-    </div>
-  );
+      )} */
 }
-
-export default App;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { CgBee } from 'react-icons/cg'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { Link } from "react-router-dom";
 
 
 
@@ -41,15 +42,18 @@ const Header = () => {
     }
   `
 
-  const Nav = styled.p`
+  const Nav = styled(Link)`
     font-size: 2.5rem;
     color: #000000;
     border-bottom: 2px solid black;
     width: 100%;
     text-align: right;
+    padding: 10px 0;
+    text-decoration: none;
     @media (min-width: 768px){
       text-align: left;
       border: 0;
+      padding: 0;
     }
     ${props => props.primary && css`
       @media (min-width: 768px){
@@ -110,20 +114,20 @@ const Header = () => {
       <Bee />
       <HamburgerIcon onClick={() => { setOpenMenu(!openMenu) }} />
       {openMenu ? (<Menu>
-        <Nav>About</Nav>
-        <Nav>Resume</Nav>
-        <Nav>Projects</Nav>
-        <Nav>Certifications</Nav>
+        <Nav to="/" >About</Nav>
+        {/* <Nav>Resume</Nav> */}
+        <Nav to="/projects">Projects</Nav>
+        <Nav to="/certifications">Certifications</Nav>
       </Menu>) : (
         <></>
       )}
 
 
       <Menu primary>
-        <Nav >About</Nav>
-        <Nav>Resume</Nav>
-        <Nav>Projects</Nav>
-        <Nav>Certifications</Nav>
+        <Nav to="/" >About</Nav>
+        {/* <Nav>Resume</Nav> */}
+        <Nav to="/projects">Projects</Nav>
+        <Nav to="/certifications" >Certifications</Nav>
       </Menu>
 
     </Wrapper>
