@@ -1,59 +1,61 @@
 import react from "react";
 import styled from "styled-components";
 
-
+const secondary = "#17B890"
 
 const Wrapper = styled.div`
     width: 100%;
     font-family: "Poppins", sans-serif;
-    border: 2px solid #90caf9;
+    border: 3px solid #158BCB;
     border-radius: 10px;
     margin-top: 20px;
     padding: 15px;
     display: flex;
     flex-wrap: wrap;
     max-width: 768px;
+    
    
   `;
 
 const Title = styled.p`
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 15px;
     font-weight: 500;
 
   `;
 
 const Description = styled.p`
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-bottom: 15px;
   `;
 
-<div>
-  <p></p>
-</div>
+
 
 
 const InfoLinkButton = styled.button`
  font-family: "Poppins", sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-bottom: 15px;
     width: 90%;
     height: 40px;
     border-radius:5px;
-    background-color: #fefefa;
-   border: 2px solid #90caf9;
+    /* background-color: #FC5185; */
+    background-color: #158BCB;
+    border: 2px solid #158BCB;
   
-   color: black;
+   color: white;
    justify-self: center;
+
    &:hover{
-     background-color: #90caf9;
-     color: #0d41A1;
+     background-color: transparent;
+     color: #158BCB;
+
    }
 
 
   `;
 
-const InfoLinkContainer = styled.p`
+const InfoLinkContainer = styled.div`
     width: 50%;
     display: flex;
     justify-content: center;
@@ -65,7 +67,7 @@ const InfoLinkContainer = styled.p`
 
 
 const MadeWithAbout = styled.div`
- font-size: 1.8rem;
+ font-size: 2rem;
  margin-bottom: 10px;
  width: 100%;
 
@@ -75,8 +77,9 @@ const TagsContainer = styled.div`
     justify-content: space-evenly;
     margin: 0 auto;
     width: 100%;
-
     flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
   `;
 
 

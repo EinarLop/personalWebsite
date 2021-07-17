@@ -1,5 +1,14 @@
 import React from 'react';
-import { ReactIcon, SassIcon, NodeIcon, MongodbIcon, HtmlIcon, MySqlIcon, StyledComponentsIcon, GitIcon, JavascriptIcon, PythonIcon, FirebaseIcon } from "./Icons";
+import {
+  ReactIcon,
+  SassIcon,
+  NodeIcon,
+  MongodbIcon,
+  HtmlIcon,
+  MySqlIcon,
+  StyledComponentsIcon,
+  GitIcon, JavascriptIcon, PythonIcon, FirebaseIcon
+} from "../../Components/Icons";
 import styled from 'styled-components'
 
 
@@ -14,11 +23,11 @@ const TechStack = () => {
   `
 
   const Title = styled.p`
-    font-size:2.8rem;
+    font-size:3rem;
     width: 100%;
     text-align: center;
     color: black;
-    font-weight: 500;
+  font-weight: 500;
   `
 
   const Subtitle = styled.p`

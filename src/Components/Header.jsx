@@ -19,9 +19,9 @@ const Header = () => {
     padding: 25px 25px 0 25px;
     background-color: #F5F5F5;
     flex-wrap: wrap;
-    max-width: 1440px;
+    /* max-width: 1440px; */
     margin: auto;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     @media (min-width: 768px){
       justify-content: flex-start;
       gap: 25px; 
@@ -29,7 +29,7 @@ const Header = () => {
   `
   const Bee = styled(CgBee)`
     font-size: 6rem ;
-    color: #FC5185;
+    color: #158BCB;
     
     
   `

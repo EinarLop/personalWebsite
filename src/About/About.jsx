@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import Person from "./person.svg"
+import Person from "./Img/person.svg"
 import { FaGithub } from 'react-icons/fa';
 import { AiFillLinkedin } from 'react-icons/ai'
 import { ImProfile } from "react-icons/im"
 import { GrInherit } from 'react-icons/gr';
 import ResumePdf from "./Resume/Resume.pdf"
-import TechStack from './TechStack';
+import TechStack from './Components/TechStack';
 
 
-const AboutMe = () => {
+const About = () => {
 
   const Wrapper = styled.div`
     display: flex;
@@ -56,7 +56,7 @@ const AboutMe = () => {
   const Title = styled.p`
     font-size: 3.5rem;
     /* color: #2C5784; */
-    color: #FC5185;
+    color: #158BCB;
     height: auto;
     @media (min-width: 768px){
      width : 70%;
@@ -102,21 +102,21 @@ const AboutMe = () => {
   const Github = styled(FaGithub)`
     font-size: 5rem;
     &:hover{
-      color:#FC5185;
+      color:#158BCB;
     }
   `
 
   const LinkedIn = styled(AiFillLinkedin)`
     font-size: 5rem;
     &:hover{
-      color:#FC5185;
+      color:#158BCB;
     } 
   `
 
   const Resume = styled(ImProfile)`
     font-size: 5rem;
   &:hover{
-    color:#FC5185;
+    color:#158BCB;
   }
   `
 
@@ -167,4 +167,4 @@ const AboutMe = () => {
 
 }
 
-export default AboutMe;
+export default About;

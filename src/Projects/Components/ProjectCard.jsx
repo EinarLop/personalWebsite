@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import image from "./ProjectImages/demo.jpg"
+// import image from "./ProjectImages/demo.jpg"
 
 const Wrapper = styled.div`
 width: 300px;
@@ -65,7 +65,7 @@ font-size:1.8rem;
 function ProjectCard() {
     return (
         <Wrapper>
-            <Image src={image} />
+            <Image />
             <Title> Inventory System</Title>
             <Description> This is a very good description</Description>
             <ButtonsContanier>

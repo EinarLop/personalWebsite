@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { ReactIcon, SassIcon, NodeIcon, MongodbIcon } from "./Components/Icons";
-import ProjectCard from "./Components/ProjectCard";
-import CertificationCard from "./Components/CertificationCard";
-import Hero from "./Components/Hero";
-import ProjectCardNew from "./Components/ProjectCardNew.jsx";
+// import ProjectCard from "./Projects/Components/ProjectCard";
+// import CertificationCard from "./Certifications/CertificationCard";
+
+// import ProjectCardNew from "./Projects/Components/ProjectCardNew.jsx";
 import styled from "styled-components";
 import Header from "./Components/Header";
-import AboutMe from "./Components/AboutMe";
-import TechStack from "./Components/TechStack";
+import About from "./About/About";
+import Projects from "./Projects/Projects.jsx";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // const Wrapper = styled.div`
@@ -71,9 +72,9 @@ function App() {
     <Router>
       <Wrapper>
         <Header />
-        <Route exact path="/" component={AboutMe} />
-        <Route exact path="/projects" component={AboutMe} />
-        <Route exact path="/certifications" component={AboutMe} />
+        <Route exact path="/" component={About} />
+        <Route exact path="/projects" component={Projects} />
+        <Route exact path="/certifications" component={About} />
       </Wrapper>
     </Router>
   );
