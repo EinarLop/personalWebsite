@@ -82,28 +82,28 @@ const Resume = styled(ImProfile)`
   }
 `
 function Hero() {
-  return (
-    <Wrapper>
-      <Title>Hello, I am Einar</Title>
+    return (
+        <Wrapper>
+            <Title>Hello, I am Einar</Title>
 
 
-      <Description> A Computer science student at ITESM looking foward to graduating in winter 2021</Description>
-      <Description>Web developer </Description>
-      <LinkBox>
-        <Link href="https://github.com/einarlop" target="_blank" >
-          <Github />
-        </Link>
+            <Description> A Computer science student at ITESM looking foward to graduating in summer 2023</Description>
+            <Description>Web developer </Description>
+            <LinkBox>
+                <Link href="https://github.com/einarlop" target="_blank" >
+                    <Github />
+                </Link>
 
-        <Link href="https://www.linkedin.com/in/einarlopez/" target="_blank">   <LinkedIn /> </Link>
+                <Link href="https://www.linkedin.com/in/einarlopez/" target="_blank">   <LinkedIn /> </Link>
 
-        <Link href={ResumePdf} target="_blank"> <Resume /> </Link>
+                <Link href={ResumePdf} target="_blank"> <Resume /> </Link>
 
 
 
-      </LinkBox>
+            </LinkBox>
 
-    </Wrapper>
-  )
+        </Wrapper>
+    )
 }
 
 export default Hero

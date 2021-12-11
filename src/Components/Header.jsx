@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
 
-  const [openMenu, setOpenMenu] = useState(false)
+    const [openMenu, setOpenMenu] = useState(false)
 
-  const Wrapper = styled.div`
+    const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     font-family: "Poppins", sans-serif;
@@ -27,14 +27,14 @@ const Header = () => {
       gap: 25px; 
     }
   `
-  const Bee = styled(CgBee)`
+    const Bee = styled(CgBee)`
     font-size: 6rem ;
     color: #158BCB;
     
     
   `
 
-  const HamburgerIcon = styled(GiHamburgerMenu)`
+    const HamburgerIcon = styled(GiHamburgerMenu)`
     font-size: 4rem;
     color: black;
     @media (min-width: 768px){
@@ -42,7 +42,7 @@ const Header = () => {
     }
   `
 
-  const Nav = styled(Link)`
+    const Nav = styled(Link)`
     font-size: 2.5rem;
     color: #000000;
     border-bottom: 2px solid black;
@@ -62,7 +62,7 @@ const Header = () => {
     `}
   `
 
-  const Menu = styled.div`
+    const Menu = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -84,7 +84,7 @@ const Header = () => {
     `}
   `
 
-  const MenuLg = styled.div`
+    const MenuLg = styled.div`
     display: none;
     @media (min-width: 768px){
       flex-direction: row;
@@ -95,44 +95,44 @@ const Header = () => {
       display: flex;
     }
   `
-  const Test = styled.div`
+    const Test = styled.div`
     display: none;
    @media (min-width: 768px){
       
     }
   `
-  window.onresize = resize;
+    window.onresize = resize;
 
-  function resize() {
-    setOpenMenu(false)
-  }
-
-
-  return (
-    <Wrapper>
-
-      <Bee />
-      <HamburgerIcon onClick={() => { setOpenMenu(!openMenu) }} />
-      {openMenu ? (<Menu>
-        <Nav to="/" >About</Nav>
-        {/* <Nav>Resume</Nav> */}
-        <Nav to="/projects">Projects</Nav>
-        <Nav to="/certifications">Certifications</Nav>
-      </Menu>) : (
-        <></>
-      )}
+    function resize() {
+        setOpenMenu(false)
+    }
 
 
-      <Menu primary>
-        <Nav to="/" >About</Nav>
-        {/* <Nav>Resume</Nav> */}
-        <Nav to="/projects">Projects</Nav>
-        <Nav to="/certifications" >Certifications</Nav>
-      </Menu>
+    return (
+        <Wrapper>
 
-    </Wrapper>
+            <Bee />
+            <HamburgerIcon onClick={() => { setOpenMenu(!openMenu) }} />
+            {openMenu ? (<Menu>
+                <Nav to="/" >About</Nav>
+                {/* <Nav>Resume</Nav> */}
+                <Nav to="/"> Projects</Nav>
+                <Nav to="/certifications">Certifications</Nav>
+            </Menu>) : (
+                <></>
+            )}
 
-  )
+
+            <Menu primary>
+                <Nav to="/" >About</Nav>
+                {/* <Nav>Resume</Nav> */}
+                <Nav to="/">Projects</Nav>
+                <Nav to="/certifications" >Certifications</Nav>
+            </Menu>
+
+        </Wrapper>
+
+    )
 
 }
 

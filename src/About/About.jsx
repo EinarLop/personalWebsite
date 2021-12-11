@@ -11,7 +11,7 @@ import TechStack from './Components/TechStack';
 
 const About = () => {
 
-  const Wrapper = styled.div`
+    const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     padding: 25px;
@@ -22,7 +22,7 @@ const About = () => {
     
   `
 
-  const Img = styled.img`
+    const Img = styled.img`
     width: 0;
 
 
@@ -38,7 +38,7 @@ const About = () => {
     }
   `
 
-  const About = styled.main`
+    const About = styled.main`
     width: 100%;
     font-family: "Poppins", sans-serif;
     display: flex;
@@ -53,7 +53,7 @@ const About = () => {
 
     }
   `
-  const Title = styled.p`
+    const Title = styled.p`
     font-size: 3.5rem;
     /* color: #2C5784; */
     color: #158BCB;
@@ -64,25 +64,25 @@ const About = () => {
     /* line-height: 1.6; */
   `
 
-  const SubTitle = styled.p`
+    const SubTitle = styled.p`
     font-size: 3rem;
     color: black;
     height: auto;
  
     margin-top: 25px;
   `
-  const Li = styled.li`
+    const Li = styled.li`
     font-size: 2.2rem;
     padding: 8px 0;
   `
-  const Ul = styled.ul`
+    const Ul = styled.ul`
     list-style-position: outside;
     padding-left: 20px;
   `
 
 
 
-  const LinkBox = styled.div`
+    const LinkBox = styled.div`
     margin-top:40px;
     width: 100%;
     display: flex;
@@ -90,7 +90,7 @@ const About = () => {
 
   `
 
-  const Link = styled.a`
+    const Link = styled.a`
     color: inherit; 
     display: flex;
     flex-direction: column;
@@ -99,69 +99,69 @@ const About = () => {
     font-size: 1.8rem;
 
   `
-  const Github = styled(FaGithub)`
+    const Github = styled(FaGithub)`
     font-size: 5rem;
     &:hover{
       color:#158BCB;
     }
   `
 
-  const LinkedIn = styled(AiFillLinkedin)`
+    const LinkedIn = styled(AiFillLinkedin)`
     font-size: 5rem;
     &:hover{
       color:#158BCB;
     } 
   `
 
-  const Resume = styled(ImProfile)`
+    const Resume = styled(ImProfile)`
     font-size: 5rem;
   &:hover{
     color:#158BCB;
   }
   `
 
-  return (
-    <>
-      <Wrapper>
-        <Img src={Person} />
-        <About>
-          <Title>Hi, I'm Einar. </Title>
-          <Title> I'm a computer science student from Mexico.  </Title>
+    return (
+        <>
+            <Wrapper>
+                <Img src={Person} />
+                <About>
+                    <Title>Hi, I'm Einar. </Title>
+                    <Title> I'm a computer science student from Mexico.  </Title>
 
-          <SubTitle>About Me:</SubTitle>
-          <Ul>
-            <Li> Student at Tecnológico de Monterrey</Li>
-            <Li> Expected graduation date: summer 2023</Li>
-            <Li>Looking for summer 2022 internship</Li>
-            <Li> Passionate about web development</Li>
+                    <SubTitle>About Me:</SubTitle>
+                    <Ul>
+                        <Li> Student at Tecnológico de Monterrey</Li>
+                        <Li> Expected graduation date: summer 2023</Li>
+                        <Li>Looking for summer 2022 internship</Li>
+                        <Li> Passionate about web development</Li>
 
-          </Ul>
-        </About>
+                    </Ul>
+                </About>
 
-        <LinkBox>
-          <Link href="https://github.com/einarlop" target="_blank" >
-            <Github />
-            Github
-          </Link>
+                <LinkBox>
+                    <Link href="https://github.com/einarlop" target="_blank" >
+                        <Github />
+                        Github
+                    </Link>
 
-          <Link href="https://www.linkedin.com/in/einarlopez/" target="_blank">   <LinkedIn />
+                    <Link href="https://www.linkedin.com/in/einarlopez/" target="_blank">   <LinkedIn />
 
-            LinkedIn
-          </Link>
+                        LinkedIn
+                    </Link>
 
-          <Link href={ResumePdf} target="_blank"> <Resume />
-            Resume
-          </Link>
+                    <Link href={ResumePdf} target="_blank"> <Resume />
+                        Resume
+                    </Link>
 
 
 
-        </LinkBox>
+                </LinkBox>
 
-      </Wrapper >
+            </Wrapper >
 
-      <TechStack />
-    </>
-  )
+            <TechStack />
+        </>
+    )
 
 
 
