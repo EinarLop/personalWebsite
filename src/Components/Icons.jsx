@@ -4,6 +4,7 @@ import { GrNode, GrMysql } from "react-icons/gr";
 import { SiJsonwebtokens, SiStyledComponents, SiJavascript, SiFirebase } from "react-icons/si"
 import { CgBee } from "react-icons/cg"
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai"
+import{FaJava } from "react-icons/fa"
 
 
 
@@ -27,7 +28,7 @@ const DiReactIcon = styled(DiReact)`
   font-size: 3rem;
   color: #43c1e4;
   ${props => props.lg && css`
-      font-size: 5rem;
+      font-size: 7rem;
     `}
 `;
 
@@ -45,7 +46,7 @@ const AiFillHtml5Icon = styled(AiFillHtml5)`
   font-size: 3rem;
   color: #F16524;
   ${props => props.lg && css`
-      font-size: 5rem;
+      font-size: 7rem;
     `}
 `;
 
@@ -62,7 +63,7 @@ const DiSassIcon = styled(DiSass)`
   font-size: 3rem;
   color: #bf4080;
   ${props => props.lg && css`
-      font-size: 5rem;
+      font-size: 7rem;
     `}
 `;
 
@@ -80,7 +81,7 @@ const GrNodeIcon = styled(GrNode)`
   font-size: 3rem;
   color: #43853d;
   ${props => props.lg && css`
-      font-size: 5rem;
+      font-size: 6rem;
     `}
 `;
 
@@ -96,15 +97,15 @@ const DiMongodbIcon = styled(DiMongodb)`
   font-size: 3rem;
   color: #13AA52;
   ${props => props.lg && css`
-      font-size: 5rem;
+      font-size: 7rem;
     `}
 `;
 
 const MongodbIcon = (props) => {
   return (
     props.size === "lg" ?
-      (<Tag> <DiMongodbIcon lg /> MongoDb</Tag>)
-      : (<Tag><DiMongodbIcon /> MongoDb</Tag>)
+      (<Tag> <DiMongodbIcon lg /> MongoDB</Tag>)
+      : (<Tag><DiMongodbIcon /> MongoDB</Tag>)
   )
 }
 
@@ -112,7 +113,7 @@ const GrMysqlIcon = styled(GrMysql)`
   font-size: 3rem;
   color: #08497e;
   ${props => props.lg && css`
-      font-size: 5rem;
+      font-size: 6rem;
     `}
 `;
 
@@ -146,7 +147,7 @@ const DiGitIcon = styled(DiGit)`
   color: #F34B2E;
   
   ${props => props.lg && css`
-      font-size: 5rem;
+      font-size: 7rem;
     `}
 `
 const GitIcon = (props) => {
@@ -164,7 +165,7 @@ const SiJavascriptIcon = styled(SiJavascript)`
  font-size: 3rem;
   color: #F7DF1E;
   ${props => props.lg && css`
-      font-size: 4rem;
+      font-size: 6rem;
     `}
 `
 const JavascriptIcon = (props) => {
@@ -176,13 +177,28 @@ const JavascriptIcon = (props) => {
 }
 
 
+const FaJavaIcon = styled(FaJava)`
+ font-size: 3rem;
+  color: #da3a33;
+  ${props => props.lg && css`
+      font-size: 7rem;
+    `}
 
+    `
+
+const JavaIcon = (props) => {
+  return (
+    props.size === "lg" ?
+      (<Tag> <FaJavaIcon lg /> Java</Tag>)
+      : (<Tag><FaJavaIcon /> Java</Tag>)
+  )
+}
 
 const DiPythonIcon = styled(DiPython)`
  font-size: 3rem;
   color: #436C97;
   ${props => props.lg && css`
-      font-size: 4rem;
+      font-size: 7rem;
     `}
 `
 const PythonIcon = (props) => {
@@ -212,4 +228,4 @@ const FirebaseIcon = (props) => {
 }
 
 
-export { ReactIcon, SassIcon, NodeIcon, MongodbIcon, HtmlIcon, MySqlIcon, StyledComponentsIcon, GitIcon, JavascriptIcon, PythonIcon, FirebaseIcon }
+export { ReactIcon, SassIcon, NodeIcon, MongodbIcon, HtmlIcon, MySqlIcon, StyledComponentsIcon, GitIcon, JavascriptIcon, PythonIcon, FirebaseIcon, JavaIcon }

@@ -7,7 +7,7 @@ import {
   HtmlIcon,
   MySqlIcon,
   StyledComponentsIcon,
-  GitIcon, JavascriptIcon, PythonIcon, FirebaseIcon
+  GitIcon, JavascriptIcon, PythonIcon, FirebaseIcon, JavaIcon
 } from "../../Components/Icons";
 import styled from 'styled-components'
 
@@ -43,7 +43,7 @@ color: black;
     flex-wrap: wrap;
     align-items: center;
     padding: 25px 0;
-    gap: 15px;
+    gap: 35px;
   `
 
   return (
@@ -52,15 +52,17 @@ color: black;
 
       <Subtitle> Languages</Subtitle>
       <IconContainer>
+      <JavascriptIcon size="lg" />
         <PythonIcon size="lg" />
-        <JavascriptIcon size="lg" />
+    
+        <JavaIcon size="lg"/>
       </IconContainer>
 
       <Subtitle>Frontend</Subtitle>
       <IconContainer>
         <HtmlIcon size="lg" />
         <SassIcon size="lg" />
-        <StyledComponentsIcon size="lg" />
+        {/* <StyledComponentsIcon size="lg" /> */}
         <ReactIcon size="lg" />
 
       </IconContainer>
@@ -70,7 +72,7 @@ color: black;
         <NodeIcon size="lg" />
         <MongodbIcon size="lg" />
         <MySqlIcon size="lg" />
-        <FirebaseIcon size="lg" />
+        {/* <FirebaseIcon size="lg" /> */}
       </IconContainer>
 
       <Subtitle> Tools</Subtitle>

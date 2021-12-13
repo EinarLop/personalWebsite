@@ -1,5 +1,7 @@
 import react from "react";
 import styled from "styled-components";
+import Carousel from "../../Components/Carousel.jsx"
+
 
 const secondary = "#17B890"
 
@@ -82,7 +84,10 @@ const TagsContainer = styled.div`
     margin-bottom: 25px;
   `;
 
-
+const Details = styled.details`
+width: 100%;
+font-size: 2rem;
+`
 
 const ProjectCardNew = (props) => {
 
@@ -94,6 +99,13 @@ const ProjectCardNew = (props) => {
         {props.description}
       </Description>
 
+      <Details >
+        <summary>Some details</summary>
+        <Carousel></Carousel>
+      </Details>
+      
+
+     
       <MadeWithAbout>Made with:</MadeWithAbout>
       <TagsContainer  >
         {props.childComponents}

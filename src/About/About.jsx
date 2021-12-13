@@ -14,7 +14,7 @@ const About = () => {
     const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
-    padding: 25px;
+    padding: 25px 25px 0 25px;
     /* background-color: #F5F5F5; */
     font-family: "Poppins", sans-serif;
     max-width: 1024px;
@@ -87,6 +87,8 @@ const About = () => {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap:35px;
 
   `
 
@@ -96,25 +98,25 @@ const About = () => {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.8rem;  
 
   `
     const Github = styled(FaGithub)`
-    font-size: 5rem;
+    font-size: 7rem;
     &:hover{
       color:#158BCB;
     }
   `
 
     const LinkedIn = styled(AiFillLinkedin)`
-    font-size: 5rem;
+    font-size: 7rem;
     &:hover{
       color:#158BCB;
     } 
   `
 
     const Resume = styled(ImProfile)`
-    font-size: 5rem;
+    font-size: 7rem;
   &:hover{
     color:#158BCB;
   }
