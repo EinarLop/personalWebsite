@@ -1,6 +1,6 @@
 import react from "react";
-import styled from "styled-components";
 import Carousel from "../../Components/Carousel.jsx"
+import styled, { css } from "styled-components";
 
 
 const secondary = "#17B890"
@@ -34,12 +34,16 @@ const Description = styled.p`
 
 
 
-const InfoLinkButton = styled.button`
+const InfoLinkButton = styled.a`
  font-family: "Poppins", sans-serif;
     font-size: 1.8rem;
     margin-bottom: 15px;
     width: 90%;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     border-radius:5px;
     /* background-color: #FC5185; */
     background-color: #158BCB;
@@ -61,10 +65,15 @@ const InfoLinkContainer = styled.div`
     width: 50%;
     display: flex;
     justify-content: center;
-    
     @media (max-width: 767px){
       width: 100%;
     }
+
+    ${props => props.lg && css`
+    width:75%;
+    margin: 0 auto;
+  `}
+
   `;
 
 
@@ -87,6 +96,7 @@ const TagsContainer = styled.div`
 const Details = styled.details`
 width: 100%;
 font-size: 2rem;
+margin-bottom:15px;
 `
 
 const ProjectCardNew = (props) => {
@@ -100,8 +110,8 @@ const ProjectCardNew = (props) => {
       </Description>
 
       <Details >
-        <summary>Some details</summary>
-        <Carousel></Carousel>
+        <summary>Images</summary>
+        <Carousel pics={props.pics}></Carousel>
       </Details>
       
 
@@ -110,12 +120,21 @@ const ProjectCardNew = (props) => {
       <TagsContainer  >
         {props.childComponents}
       </TagsContainer>
-      <InfoLinkContainer>
+
+      {props.deployed  === "true" ? (<> 
+        <InfoLinkContainer>
         <InfoLinkButton> Live version</InfoLinkButton>
       </InfoLinkContainer>
       <InfoLinkContainer>
         <InfoLinkButton> Code </InfoLinkButton>
       </InfoLinkContainer>
+      
+      </>) : (<InfoLinkContainer lg>
+      <InfoLinkButton href={props.github} target="_blank" > Code   </InfoLinkButton>
+      </InfoLinkContainer>) }
+
+
+     
 
     </Wrapper>
   );
