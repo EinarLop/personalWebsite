@@ -1,10 +1,11 @@
 import styled, { css } from "styled-components";
-import { DiReact, DiSass, DiMongodb, DiGit, DiPython } from "react-icons/di";
+import { DiReact, DiSass, DiMongodb, DiGit, DiPython, DiCss3} from "react-icons/di";
 import { GrNode, GrMysql } from "react-icons/gr";
-import { SiJsonwebtokens, SiStyledComponents, SiJavascript, SiFirebase, SiPhp, SiCss3 } from "react-icons/si"
+import { SiJsonwebtokens, SiStyledComponents, SiJavascript, SiFirebase, SiPhp} from "react-icons/si"
 import { CgBee } from "react-icons/cg"
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai"
 import{FaJava } from "react-icons/fa"
+
 
 
 
@@ -41,7 +42,7 @@ const ReactIcon = (props) => {
 }
 
 const SiPhpIcon = styled(SiPhp)`
-  font-size: 5rem;
+  font-size: 5.2rem;
   color: #7477A9;
   ${props => props.lg && css`
       font-size: 7rem;
@@ -74,8 +75,8 @@ const HtmlIcon = (props) => {
 }
 
 
-const SiCss3Icon = styled(SiCss3)`
-  font-size: 4.5rem;
+const DiCss3Icon = styled(DiCss3)`
+  font-size: 5.2rem;
   color: #5297f8;
   ${props => props.lg && css`
       font-size: 7rem;
@@ -85,8 +86,8 @@ const SiCss3Icon = styled(SiCss3)`
 const CssIcon = (props) => {
   return (
     props.size === "lg" ?
-      (<Tag><SiCss3Icon lg /> CSS </Tag>)
-      : (<Tag><SiCss3Icon /> CSS </Tag>)
+      (<Tag><DiCss3Icon lg /> CSS </Tag>)
+      : (<Tag><DiCss3Icon /> CSS </Tag>)
   )
 }
 
@@ -141,7 +142,7 @@ const MongodbIcon = (props) => {
 }
 
 const GrMysqlIcon = styled(GrMysql)`
-  font-size: 3rem;
+  font-size: 5rem;
   color: #08497e;
   ${props => props.lg && css`
       font-size: 6rem;

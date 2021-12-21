@@ -116,7 +116,7 @@ const Header = () => {
             {openMenu ? (<Menu>
                 <Nav to="/" >About</Nav>
                 {/* <Nav>Resume</Nav> */}
-                <Nav to="/"> Projects</Nav>
+                <Nav to="/projects"> Projects</Nav>
                 <Nav to="/certifications">Certifications</Nav>
             </Menu>) : (
                 <></>
@@ -126,7 +126,7 @@ const Header = () => {
             <Menu primary>
                 <Nav to="/" >About</Nav>
                 {/* <Nav>Resume</Nav> */}
-                <Nav to="/">Projects</Nav>
+                <Nav to="/projects">Projects</Nav>
                 <Nav to="/certifications" >Certifications</Nav>
             </Menu>
 

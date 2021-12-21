@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import ProjectCardNew from './Components/ProjectCardNew'
-import { ReactIcon, SassIcon, NodeIcon, MongodbIcon, PhpIcon, HtmlIcon, CssIcon, JavascriptIcon } from '../Components/Icons';
+import { ReactIcon, SassIcon, NodeIcon, MongodbIcon, PhpIcon, HtmlIcon, CssIcon, JavascriptIcon, MySqlIcon } from '../Components/Icons';
 
 
 const Wrapper = styled.div`
 font-family: "Poppins", sans-serif;
+min-height:100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -34,7 +35,9 @@ const Projects = () => {
         github="//github.com/einarlop/dines"
         deployed="false"
         title="Dines"
-        description="orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut al"
+        description="Final project for my web developmet course. Platform to share dishes and restaurants with your friends and with the public.
+        Every dish (dine) contains relevant information for foodies such as price, restaurant and score.
+        Users can create profiles, add, edit and delete dines and scroll through the commuinty dines "
         pics={[
           {caption: "Homepage", image:  'dines_00.png'}, 
           {caption:"Register", image: 'dines_02.png'},
@@ -48,8 +51,9 @@ const Projects = () => {
         childComponents={[
           <HtmlIcon />,
           <CssIcon/>,
-          <PhpIcon />,
           <JavascriptIcon/>,
+          <MySqlIcon/>,
+          <PhpIcon />,
 
         ]}
       />
