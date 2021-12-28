@@ -7,7 +7,7 @@ import { ImProfile } from "react-icons/im"
 import { GrInherit } from 'react-icons/gr';
 import ResumePdf from "./Resume/Resume.pdf"
 import TechStack from './Components/TechStack';
-
+import Ss from "./Img/einarlopezaltamirano.vercel.app_.png"
 
 const About = () => {
 
@@ -162,6 +162,7 @@ const About = () => {
             </Wrapper >
 
             <TechStack />
+            <img src={Ss} alt="" style={{display: "none"}}/>
         </>
     )
 
